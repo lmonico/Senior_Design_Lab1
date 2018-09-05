@@ -1,6 +1,6 @@
 /*#include <ESP8266WiFi.h>
 #include <FirebaseArduino.h>
-#define FIREBASE_HOST "https://senior-design-lab-1.firebaseio.com/"
+#define FIREBASE_HOST "senior-design-lab-1.firebaseio.com"
 #define FIREBASE_AUTH "ayPFppZ85ao3smSbXmjKHd4mDZ4EnPjzPGI8bUH0"
 #define WIFI_SSID ""
 #define WIFI_PASSWORD ""
@@ -20,6 +20,16 @@ void setup() {
   Serial.println("Dallas Temperature IC Control Library Demo"); 
   sensors.begin();
 
+
+/* https://medium.com/konel/firebase-with-realtime-database-for-iot-applications-e615a7057a48
+   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+   Serial.print(“connecting”);
+   while (WiFi.status() != WL_CONNECTED) {
+    Serial.print(“.”);
+   }
+   delay(500);
+   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+*/
 }
 
 void loop() {
