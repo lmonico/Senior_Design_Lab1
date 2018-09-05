@@ -42,6 +42,6 @@ void loop() {
    Serial.print(sensors.getTempCByIndex(0));
    delay(1000); 
 
-   float t = sensors.getTempFByIndex(0);
+   float t = sensors.getTempCByIndex(0);
    Firebase.setFloat ("Temperature", t);
 }
