@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{epoch, firebase-app, firebase-auth, firebase-database, firebase-messaging, firebase-storage, jquery}" />
+    <file url="PROJECT" libraries="{d3, d3.v5, epoch, firebase-app, firebase-auth, firebase-database, firebase-messaging, firebase-storage, jquery}" />
   </component>
 </project>
