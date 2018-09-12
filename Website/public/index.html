@@ -32,6 +32,8 @@
 
     <div id="lineChart" class="epoch category10" style="width: 1000px; height: 400px"></div>
 
+    <h3>Current Temperature:</h3>
+    <h3 id="currentTemp"></h3>
 
 </body>
 
@@ -48,20 +50,10 @@
 <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-messaging.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-storage.js"></script>
-<script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyCUt1rpCq1dix9CMZmKL0hJB0un6jU0hmc",
-        authDomain: "senior-design-lab-1.firebaseapp.com",
-        databaseURL: "https://senior-design-lab-1.firebaseio.com",
-        projectId: "senior-design-lab-1",
-        storageBucket: "senior-design-lab-1.appspot.com",
-        messagingSenderId: "841086660846"
-    };
-    firebase.initializeApp(config);
-</script>
+
 
 
 <script src="index.js"></script>
+<script src="firebaseFunctions.js"></script>
 
 </html>

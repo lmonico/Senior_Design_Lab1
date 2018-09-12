@@ -1,3 +1,8 @@
+/**
+ *  Javascript file for index.html functions
+ */
+
+
 
 
 var lineChartData = [
@@ -19,10 +24,3 @@ var lineChart = $('#lineChart').epoch({
         type: 'time.line',
         data: lineChartData
 });
-
-function addDataPoint(){
-
-    lineChart.push({time: Math.round((new Date()).getTime() / 1000), y: Math.random() * 101})
-}
-
-setInterval(addDataPoint(), 2000);
