@@ -18,6 +18,7 @@ var database = firebase.database().ref();
 
 console.log("Firebase initialized");
 
+
 database.once("value")
     .then(function(snapshot){
         snapshot.forEach(function(tempSnapshot){

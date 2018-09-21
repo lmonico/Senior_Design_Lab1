@@ -16,25 +16,22 @@
     <fieldset>
     <!-- Form Name -->
     <legend>Temperature Chart Recorder</legend>
+
     <div class="container">
-        <div class="row">
-           <div class="col-md-4 col-md-offset-2">
-           <div class="anil_nepal">
-               <label class="switch switch-left-right">
-               <input class="switch-input" type="checkbox">
+
+      <div class="anil_nepal">
+               <h5>Power</h5>
+               <label  class="switch switch-left-right">
+               <input id = "power" class="switch-input" type="checkbox">
                <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
-           </div>
-        </div>
         </div>
     </div>
+    <center><div id="lineChart" class="epoch category10" style="width: 1000px; height: 400px"></div> </center>
+    <center><h6> Seconds ago from current Time </h6></center>
     </fieldset>
     </form>
-
-    <div id="lineChart" class="epoch category10" style="width: 1000px; height: 400px"></div>
-
     <h3>Current Temperature:</h3>
     <h3 id="currentTemp"></h3>
-
 </body>
 
 <!--- Epoch charting files --->
