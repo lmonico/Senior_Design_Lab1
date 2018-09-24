@@ -1,0 +1,48 @@
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCmnqnEBfqzJHz51xdrfk4mNN4U1lJhFiw",
+    authDomain: "lab1-2018.firebaseapp.com",
+    databaseURL: "https://lab1-2018.firebaseio.com",
+    projectId: "lab1-2018",
+    storageBucket: "lab1-2018.appspot.com",
+    messagingSenderId: "964922543577"
+  };
+  firebase.initializeApp(config);
+</script>
+<h1>Realtime Temperature Data</h1>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<div id="chart_div"></div>
+
+<script>
+
+google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Temperature');
+
+      var ref = firebase.database().ref();
+      ref.on('value', function(snapshot) {
+        var currentTemp = dataSnapshot.val();
+        data.addRows([{time: Math.round((new Date()).getTime() / 1000), y: currentTemp}]);
+      });
+
+      var options = {
+        hAxis: {
+          title: 'Time'
+        },
+        vAxis: {
+          title: 'Temperature'
+        }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
